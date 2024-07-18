@@ -1,9 +1,10 @@
 # Dockerfile for building sui-node binary from scratch and starting it
 # with a configuration file.
 #
-FROM rust:1.75-bullseye AS builder
+FROM rust:1.79-bullseye AS builder
 RUN apt-get update && apt-get install -y cmake clang
 RUN git clone https://github.com/mystenlabs/sui
+RUN apt-get install -y curl cmake gcc libssl-dev pkg-config libclang-dev libpq-dev build-essential
 
 WORKDIR /sui
 

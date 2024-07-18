@@ -1,0 +1,14 @@
+---
+keystore:
+  File: config/sui.keystore
+envs:
+  - alias: localnet
+    rpc: "http://0.0.0.0:9000"
+    ws: ~
+    basic_auth: ~
+  - alias: devnet
+    rpc: "https://fullnode.devnet.sui.io:443"
+    ws: ~
+    basic_auth: ~
+active_env: localnet
+active_address: ~
